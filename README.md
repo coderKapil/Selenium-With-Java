@@ -1,0 +1,1 @@
+This repository is dedicated to my Learning towards UI Testing Using Selenium Java framework in this repository i have my portfolio of handling different UI WEBElements and how to manage and manipulate them with the help of Selenium to Automate manua testing work and save time.
