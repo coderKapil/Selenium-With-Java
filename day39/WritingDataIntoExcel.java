@@ -1,0 +1,43 @@
+package day39;
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class WritingDataIntoExcel {
+
+	public static void main(String[] args) throws IOException {
+	//writing file
+	FileOutputStream file = new FileOutputStream(System.getProperty("user.dir")+"\\testdata\\myfile.xlsx");
+	
+	XSSFWorkbook workbook = new XSSFWorkbook();
+	
+	XSSFSheet sheet = workbook.createSheet("Sheet");
+
+	XSSFRow row0 = sheet.createRow(0);
+	row0.createCell(0).setCellValue("Java");
+	row0.createCell(1).setCellValue("Python");
+	row0.createCell(2).setCellValue("Automation");
+	
+	XSSFRow row1 = sheet.createRow(1);
+	row1.createCell(0).setCellValue("C#");
+	row1.createCell(1).setCellValue("Ruby");
+	row1.createCell(2).setCellValue("Automation");
+	
+	XSSFRow row2 = sheet.createRow(2);
+	row2.createCell(0).setCellValue("C++");
+	row2.createCell(1).setCellValue("Selenium");
+	row2.createCell(2).setCellValue("Automation");
+	
+	workbook.write(file);
+	workbook.close();
+	file.close();
+	
+	System.out.println("File created..........");
+	
+	}
+
+}
